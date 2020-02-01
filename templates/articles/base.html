@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+        type="text/css">
+    <!-- <link rel="stylesheet" href="../../static/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="{% static 'articles/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    
+</head>
+<body>
+    
+<!-- Navigation -->
+<nav class="navbar navbar-light static-top" style="background-color: #74B9FF;">
+    <div class="container">
+        <b><a class="navbar-brand" href="{% url 'home' %}">Techpad</a></b>
+        <div class="ml-auto">
+            <a class="btn btn-light mr-4" href="{% url 'home' %}"><span class="ion-ios-home"> Home</span></a>
+            <a class="btn btn-light mr-4" href="{% url 'about' %}"><span class="ion-information-circled">
+                    About</span></a>
+            <a class="btn btn-light mr-4" href="{% url 'contact' %}"><span class="ion-ios-telephone"> Contact</span></a>
+        </div>
+        <!-- <a class="btn btn-primary" href="#">Sign In</a> -->
+    </div>
+</nav>
+<hr class="bg-secondary">
+
+
+{% block content %}
+    
+{% endblock  %}
+    
+
+</body>
+</html>

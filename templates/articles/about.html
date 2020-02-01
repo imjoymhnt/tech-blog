@@ -1,0 +1,30 @@
+{% extends 'articles/base.html' %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="back">
+            <h2 class="text-center">About Me</h2>
+
+            
+            {% for content in about_list %}
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                <img class="img-thumbnail rounded-circle" src="{{ content.author_image.url }}">
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+            <hr>
+                <p> {{ content.about_content }} </p>
+           
+            
+                
+            {% endfor %}
+                
+            
+    
+        </div>
+    </div>
+{% endblock  %}
+    

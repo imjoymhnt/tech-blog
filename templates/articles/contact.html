@@ -1,0 +1,22 @@
+{% extends 'articles/base.html' %}
+
+
+{% block content %}
+<div class="container">
+    <div class="back">
+        <h2 class="text-center">Contact Us</h2>
+        <hr>
+        
+        {% for text in contact_list  %}
+        <div class="jumbotron">
+            <p>{{text.contact_text}}</p>
+            <br>
+            <div class="text-center">
+        <a class="btn btn-primary" href="mailto:{{ text.email }}">Email Us</a>
+            </div>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock  %}
